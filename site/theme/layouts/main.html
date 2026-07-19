@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="boris-field-guide">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{title}} · Boris Field Guide</title>
+  <link rel="stylesheet" href="{{asset-url assets/css/field-guide.css}}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Boris Field Guide home"><span class="brand-mark" aria-hidden="true">B</span><span>Boris Field Guide</span></a>
+      {{breadcrumb}}
+    </div>
+  </header>
+  <div class="container shell">
+    <nav class="site-rail" aria-label="Site navigation">{{nav}}</nav>
+    <main id="main-content" class="reading-panel" tabindex="-1">
+      {{metadata}}
+      <article class="prose">{{content}}</article>
+      <section class="children" aria-labelledby="children-title"><h2 id="children-title">Continue exploring</h2>{{children}}</section>
+    </main>
+    <aside class="toc-rail" aria-label="On this page">{{toc}}</aside>
+  </div>
+  <footer class="site-footer">{{footer}}</footer>
+</body>
+</html>

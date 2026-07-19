@@ -1,0 +1,53 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f8f5; --surface: #fff; --soft: #edf1e8; --ink: #1b2720;
+  --muted: #5c6d61; --line: #cfdbd1; --brand: #14724b; --brand-soft: #dff3e5;
+  --focus: #b44f00; --code: #16221b; --code-ink: #f4fbf6; --max: 74rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111914; --surface: #18231c; --soft: #223128; --ink: #ebf5ed; --muted: #b6c9ba; --line: #3c5042; --brand: #86dbaa; --brand-soft: #214d36; --focus: #ffd08a; --code: #090f0b; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 20rem; background: var(--bg); color: var(--ink); line-height: 1.6; }
+a { color: var(--brand); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.container { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
+.skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 2; padding: 0.5rem 0.75rem; background: var(--ink); color: var(--surface); }
+.skip-link:focus { top: 1rem; }
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+.header-inner { display: flex; min-height: 4.25rem; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand, .hero-title { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); font-weight: 800; text-decoration: none; letter-spacing: -0.02em; }
+.brand-mark { display: inline-grid; width: 2rem; height: 2rem; place-items: center; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 900; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.88rem; }
+.breadcrumb li + li::before { content: "/"; margin-right: 0.3rem; color: var(--line); }
+.breadcrumb a { color: inherit; }
+.hero { border-bottom: 1px solid var(--line); background: var(--soft); }
+.hero-inner { padding-block: 3.5rem 2.5rem; }
+.eyebrow { margin: 0 0 0.45rem; color: var(--muted); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.hero-title { margin: 0; font-size: clamp(2rem, 6vw, 4rem); letter-spacing: -0.055em; }
+.hero-lead { max-width: 43rem; margin: 0.65rem 0 1.25rem; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.3rem); }
+.shell { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 11rem; gap: 1.25rem; align-items: start; padding-block: 1.5rem 2.5rem; }
+.site-rail, .toc-rail { position: sticky; top: 1rem; font-size: 0.9rem; }
+.site-nav ul, .page-toc ul, .page-children ul { margin: 0; padding: 0; list-style: none; }
+.site-nav ul ul { margin: 0.2rem 0; padding-left: 0.65rem; border-left: 1px solid var(--line); }
+.site-nav li, .page-toc li { margin: 0.16rem 0; }
+.site-nav a, .page-toc a { display: inline-block; padding: 0.2rem 0.3rem; color: var(--ink); text-decoration: none; }
+.site-nav a:hover, .page-toc a:hover, .site-nav .is-current > a { background: var(--brand-soft); color: var(--brand); }
+.site-nav .is-current > a { font-weight: 750; }
+.page-toc__l2 { padding-left: 0.5rem; }.page-toc__l3 { padding-left: 1rem; }
+.reading-panel, .home-panel { margin-block: 1.5rem 2.5rem; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); background: var(--surface); }
+.shell .reading-panel { margin: 0; }
+.page-metadata { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; margin: 0 0 1.4rem; padding: 0.55rem 0.7rem; background: var(--soft); font-size: 0.8rem; }
+.page-metadata div { display: flex; gap: 0.3rem; }.page-metadata dt { font-weight: 750; }.page-metadata dd { margin: 0; color: var(--muted); }
+.prose > :first-child { margin-top: 0; }.prose h1, .prose h2, .prose h3 { line-height: 1.2; letter-spacing: -0.025em; }.prose h1 { font-size: clamp(1.85rem, 5vw, 3rem); }.prose h2 { margin-top: 2rem; font-size: 1.4rem; }.prose h3 { margin-top: 1.35rem; font-size: 1.1rem; }
+.prose :not(pre) > code { padding: 0.1em 0.3em; background: var(--brand-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }.prose pre { overflow-x: auto; padding: 1rem; background: var(--code); color: var(--code-ink); }.prose pre code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.prose table { display: block; overflow-x: auto; border-collapse: collapse; border: 1px solid var(--line); }.prose th, .prose td { padding: 0.5rem 0.65rem; border-bottom: 1px solid var(--line); text-align: left; }.prose th { background: var(--soft); }.prose tr:last-child td { border-bottom: 0; }
+.admonition { margin: 1.15rem 0; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-left: 0.3rem solid var(--brand); background: var(--soft); }.admonition--warning { border-left-color: var(--focus); }.admonition__title { margin: 0 0 0.2rem; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+.children { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }.children h2 { margin: 0 0 0.6rem; font-size: 1.1rem; }.page-children li + li { margin-top: 0.4rem; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; padding-block: 1rem 2.25rem; }.footer-inner p { margin: 0; }
+@media (max-width: 58rem) { .shell { grid-template-columns: 10.5rem minmax(0, 1fr); }.toc-rail { grid-column: 2; position: static; padding: 0.7rem; background: var(--soft); } }
+@media (max-width: 42rem) { .header-inner { align-items: flex-start; flex-direction: column; padding-block: 1rem; }.shell { grid-template-columns: 1fr; gap: 0.8rem; }.site-rail, .toc-rail { grid-column: auto; position: static; padding: 0.7rem; background: var(--soft); }.site-nav ul { display: flex; flex-wrap: wrap; gap: 0.15rem; }.site-nav ul ul { display: none; }.reading-panel, .home-panel { padding: 1rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

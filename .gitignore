@@ -1,0 +1,8 @@
+dist/
+.boris/
+rag/
+context/
+source-rag/
+zig-out/
+zig-cache/
+.DS_Store

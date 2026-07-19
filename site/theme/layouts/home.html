@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="boris-field-guide">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{title}} · Boris Field Guide</title>
+  <link rel="stylesheet" href="{{asset-url assets/css/field-guide.css}}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="hero"><div class="container hero-inner">
+    <p class="eyebrow">OpenAI Build Week 2026</p>
+    <p class="hero-title"><span class="brand-mark" aria-hidden="true">B</span> Boris Field Guide</p>
+    <p class="hero-lead">A small proof site for a deterministic, graph-aware Markdown compiler built in Zig.</p>
+    {{breadcrumb}}
+  </div></header>
+  <main id="main-content" class="container home-panel" tabindex="-1">
+    {{metadata}}
+    <article class="prose">{{content}}</article>
+    <section class="children" aria-labelledby="trail-title"><h2 id="trail-title">Choose a trail</h2>{{children}}</section>
+  </main>
+  <footer class="site-footer">{{footer}}</footer>
+</body>
+</html>
