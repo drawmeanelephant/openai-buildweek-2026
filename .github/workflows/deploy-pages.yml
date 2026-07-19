@@ -1,0 +1,62 @@
+name: Build and deploy Field Guide
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Field Guide
+        uses: actions/checkout@v4
+
+      - name: Install Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.16.0
+
+      - name: Check out Boris v0.6.1
+        run: git clone --depth 1 --branch v0.6.1 https://github.com/drawmeanelephant/boris.git .boris
+
+      - name: Build Boris
+        working-directory: .boris
+        run: zig build
+
+      - name: Compile the Field Guide
+        run: |
+          .boris/zig-out/bin/boris \
+            --input site/content \
+            --theme site/theme \
+            --layout-rule default id:index site/theme/layouts/home.html \
+            --html-dir dist \
+            --quiet
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

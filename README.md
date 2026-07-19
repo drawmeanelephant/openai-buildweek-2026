@@ -45,6 +45,14 @@ The same content tree can independently produce Boris's machine-readable outputs
 
 Generated output is intentionally ignored. A deploy workflow may publish `dist/`, but this repository keeps source, theme, and reproducible instructions as the durable record.
 
+## Publish to GitHub Pages
+
+The included workflow builds the pinned Boris `v0.6.1` release from public
+source, compiles this Field Guide, then uploads the generated `dist/` as a
+GitHub Pages artifact. Before the first deployment, select **GitHub Actions**
+as the publishing source under this repository's **Settings → Pages**. The
+workflow only deploys from `main`.
+
 ## Evidence boundary
 
 The Build Week collaboration involved continuous human steering, Codex/ChatGPT, and bounded external reviews and experiments. This field guide distinguishes verified code and release evidence from draft art, agent names, and exploratory material. It is a record, not a mythology generator.
