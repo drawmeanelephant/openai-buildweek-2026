@@ -14,13 +14,12 @@ The core path is intentionally small:
 Markdown + frontmatter
        │
        ▼
-discover → validate graph → render
+discovery → graph validation → Apex rendering
        │
        ├── HTML site
-       ├── JSON IR manifest
-       ├── RAG corpus
-       ├── AI Context Bundle
-       └── llms.txt map
+       ├── JSON IR
+       ├── RAG / context bundles
+       └── migration reports
 ```
 
 The important part is not “five outputs” as a party trick. Each output comes
