@@ -26,8 +26,8 @@ jobs:
         with:
           version: 0.16.0
 
-      - name: Check out Boris v0.6.1
-        run: git clone --depth 1 --branch v0.6.1 https://github.com/drawmeanelephant/boris.git .boris
+      - name: Check out Boris v0.7.0
+        run: git clone --depth 1 --branch v0.7.0 https://github.com/drawmeanelephant/boris.git .boris
 
       - name: Build Boris
         working-directory: .boris
