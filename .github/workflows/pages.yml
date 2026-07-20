@@ -21,6 +21,9 @@ jobs:
       - name: Check out Field Guide
         uses: actions/checkout@v4
 
+      - name: Submission preflight
+        run: python3 tools/submission_preflight.py
+
       - name: Install Zig
         uses: mlugg/setup-zig@v2
         with:

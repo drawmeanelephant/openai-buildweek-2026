@@ -6,3 +6,5 @@ source-rag/
 zig-out/
 zig-cache/
 .DS_Store
+submission-preflight.json
+SUBMISSION_PREFLIGHT.md
