@@ -45,6 +45,28 @@ The same content tree can independently produce Boris's machine-readable outputs
 
 Generated output is intentionally ignored. A deploy workflow may publish `dist/`, but this repository keeps source, theme, and reproducible instructions as the durable record.
 
+## Submission preflight
+
+Before the contest deadline, run the deterministic self-audit (stdlib Python only;
+no Node, npm, network, or third-party packages):
+
+```bash
+python3 tools/submission_preflight.py
+```
+
+The tool checks required contest files, stale placeholders, wiki-link resolution,
+external project links, benchmark provenance, untracked generated outputs, the
+documented Boris build command, and the Pages `ci` status-check job. It writes:
+
+- `submission-preflight.json` — machine-readable findings
+- `SUBMISSION_PREFLIGHT.md` — human-readable summary
+
+Exit code is nonzero when any **BLOCKER** remains. Focused unit tests:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
 ## Publish to GitHub Pages
 
 The included workflow builds the pinned Boris `v0.6.1` release from public

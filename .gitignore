@@ -6,3 +6,7 @@ source-rag/
 zig-out/
 zig-cache/
 .DS_Store
+__pycache__/
+*.py[cod]
+submission-preflight.json
+SUBMISSION_PREFLIGHT.md
