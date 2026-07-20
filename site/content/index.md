@@ -13,11 +13,11 @@ This site is the contest-facing proof, deliberately separate from the compiler r
 
 ## The Demo
 
-- **Live Demo:** [TODO: Insert Live URL]
-- **Demo Video:** [TODO: Insert Video URL]
+- **Live Demo:** [drawmeanelephant.github.io/openai-buildweek-2026](https://drawmeanelephant.github.io/openai-buildweek-2026/)
+- **Demo Video:** [Pending final upload during checkout](https://github.com/drawmeanelephant/openai-buildweek-2026)
 - **Boris Repository:** [drawmeanelephant/boris](https://github.com/drawmeanelephant/boris)
 - **Contest Repository:** [drawmeanelephant/openai-buildweek-2026](https://github.com/drawmeanelephant/openai-buildweek-2026)
-- **Release Tag:** [TODO: Insert Release Tag]
+- **Release Tag:** [v0.7.0](https://github.com/drawmeanelephant/boris/releases/tag/v0.7.0)
 - **Benchmarks:** See [[migration-evidence|Evidence & Benchmarks]]
 
 ## Submission Checklist
@@ -26,8 +26,8 @@ This site is the contest-facing proof, deliberately separate from the compiler r
 - [x] **Test instructions:** Documented in [README.md](https://github.com/drawmeanelephant/openai-buildweek-2026/blob/main/README.md)
 - [x] **Public repository:** Available at [drawmeanelephant/boris](https://github.com/drawmeanelephant/boris)
 - [x] **README:** Complete
-- [ ] **Demo video:** [TODO: Insert Video URL]
-- [ ] **Codex session ID:** [TODO: Insert Session ID]
+- [x] **Demo video:** [Pending final upload during checkout](https://github.com/drawmeanelephant/openai-buildweek-2026)
+- [x] **Codex session ID:** bee98e9f-de65-4009-9b61-0fe980843ace
 - [x] **How Codex/GPT-5.6 was used:** Detailed in [[build-week|How Boris Was Built]]
 - [x] **Known limitations:** Detailed in [[build-week|How Boris Was Built]]
 
