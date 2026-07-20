@@ -8,7 +8,7 @@ tags: [stress-tests, benchmarks, scaling, zig]
 
 # How to Run Stress Tests & Benchmarks
 
-Boris is optimized for speed, safety, and strict schema validation. To prove the speed claims on real, massive workloads, we subjected the compiler to hostile and heavy stress testing. 
+Boris is optimized for speed, safety, and strict schema validation. To prove the speed claims on real, massive workloads, we subjected the compiler to hostile and heavy stress testing. All benchmarks were compiled in ReleaseFast optimization mode (built with `zig build -Doptimize=ReleaseFast`) and evaluated on the same-machine to ensure identical hardware comparison.
 
 This guide details how those stress tests were constructed, what compiler constraints were uncovered, and how you can run them on your local machine.
 

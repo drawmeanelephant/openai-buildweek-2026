@@ -73,6 +73,9 @@ jobs:
       - name: Run verification script
         run: python3 .github/scripts/validate.py
 
+      - name: Run submission preflight script
+        run: python3 tools/submission_preflight.py
+
       - name: Configure GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/configure-pages@v5

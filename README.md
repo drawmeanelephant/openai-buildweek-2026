@@ -69,7 +69,7 @@ python3 -m unittest discover -s tests -v
 
 ## Publish to GitHub Pages
 
-The included workflow builds the pinned Boris `v0.6.1` release from public
+The included workflow builds the pinned Boris `v0.7.0` release from public
 source, compiles this Field Guide, then uploads the generated `dist/` as a
 GitHub Pages artifact. Before the first deployment, select **GitHub Actions**
 as the publishing source under this repository's **Settings → Pages**. The

@@ -62,7 +62,7 @@ Boris was built to be an honest, highly functional, and innovative entry for the
 ### 🛠️ 1. Technological Implementation (Skillful Zig & Codex Code)
 * **The Achievement:** Codex co-authored a fully featured, zero-dependency compiler in **Zig 0.16.0**, navigating manual memory management, arena heap allocation, and strict pointer bounds.
 * **Non-Trivial Modules:** Codex implemented the full AST parser, the global graph validator that prevents broken links (`EPARENTMISSING`), and the deterministic SHA-256 caching engine that reduces incremental build times by **2.7×**.
-* **Scale Proof:** Compiles and validates a 2,116-page corpus in **2.06 seconds** (~0.97ms/page).
+* **Scale Proof:** Compiles and validates a 2,116-page structured corpus in **2.06 seconds** (~0.97ms/page) using a multi-threaded parallel build (`-j 8`) in ReleaseFast mode (`zig build -Doptimize=ReleaseFast`) on Apple M4 hardware (same-machine comparison).
 
 ### 🎨 2. Design (Coherent, Cohesive Product Experience)
 * **The Achievement:** This Field Guide serves as a living, production-ready proof. It is completely compiled by Boris and showcases all five output formats live. 
