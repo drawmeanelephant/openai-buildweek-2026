@@ -90,3 +90,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  ci:
+    name: ci
+    needs: [build]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require Field Guide build success
+        run: |
+          result="${{ needs.build.result }}"
+          echo "Field Guide build result: ${result}"
+          test "${result}" = "success"
