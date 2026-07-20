@@ -34,7 +34,7 @@ that an arbitrary production site can become Boris without editorial decisions.
 To test raw throughput and determinism under heavy stress, Boris v0.7.0 was benchmarked against a pre-cleaned corpus of 804 massive GitHub READMEs.
 
 **Benchmark Environment:**
-- **Machine:** Apple M4 (10 cores, 96 GB RAM)
+- **Machine:** Apple M4 (10 cores, 16 GB RAM)
 - **Compilation Mode:** ReleaseFast (`zig build -Doptimize=ReleaseFast`)
 - **Corpus Size:** 804 Markdown files (10.57 MB of raw text)
 - **Output:** 74.21 MB of fully rendered, styled HTML
@@ -51,7 +51,7 @@ To test raw throughput and determinism under heavy stress, Boris v0.7.0 was benc
 To compare compilation efficiency against a modern, widely used framework, we conducted a same-machine benchmark comparing **Astro** against **Boris v0.7.0** on the identical, structured `filed.fyi` wiki corpus.
 
 **Benchmark Environment:**
-- **Machine:** Apple M4 (10 cores, 96 GB RAM)
+- **Machine:** Apple M4 (10 cores, 16 GB RAM)
 - **Corpus Size:** 2,111 content files + 5 category index files (poetry, aphorisms, lore)
 - **Build Mode:** Standard production build commands on both compilers
 

@@ -128,7 +128,7 @@ export BORIS=../boris/zig-out/bin/boris
 ## Head-to-Head Shootout
 
 **Benchmark Environment:**
-- **Machine:** Apple M4 (10 cores, 96 GB RAM)
+- **Machine:** Apple M4 (10 cores, 16 GB RAM)
 - **Corpus Size:** 2,111 content files
 - **Build Mode:** ReleaseFast (`zig build -Doptimize=ReleaseFast`)
 - **Workers:** `-j 8`
@@ -142,10 +142,10 @@ Boris finished in **2.69 seconds** on the same-machine comparison.
         _page("migration-evidence", "Evidence", evidence_body, parent="index"),
     )
     stress_body = """# Stress
-
-Apple M4 (10 cores, 96 GB RAM), corpus of 804 pages, ReleaseFast, `-j 1`,
-same-machine cold runs averaged **78.85 seconds**.
-"""
+ 
+ Apple M4 (10 cores, 16 GB RAM), corpus of 804 pages, ReleaseFast, `-j 1`,
+ same-machine cold runs averaged **78.85 seconds**.
+ """
     _write(
         root / "site/content/stress-tests.md",
         _page("stress-tests", "Stress", stress_body, parent="index"),

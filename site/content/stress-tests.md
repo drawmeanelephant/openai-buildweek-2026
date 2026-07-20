@@ -20,7 +20,7 @@ This test measures raw, sustained throughput across varying concurrency levels o
 
 * **The Dataset:** A pre-cleaned corpus of 804 of the most starred GitHub repository READMEs (`davidmyersdev/markdown-dataset`), totaling **10.57 MB of raw Markdown**.
 * **The Workflow:** Compiles the 10.57 MB of Markdown into **74.21 MB of fully rendered, styled HTML**.
-* **Key Findings:** On an Apple M4 (10 cores, 96 GB RAM), the single-threaded build (`-j 1`) completed in **78.85s**, which was actually *faster* than multi-threaded configurations (e.g., `-j 10` took 84.67s).
+* **Key Findings:** On an Apple M4 (10 cores, 16 GB RAM), the single-threaded build (`-j 1`) completed in **78.85s**, which was actually *faster* than multi-threaded configurations (e.g., `-j 10` took 84.67s).
 * **The Bottleneck:** Pushing concurrency levels past physical limitations causes intense **OS lock contention** on file writes. Slower disk I/O and kernel page-table overhead negate multi-threading gains. Single-threaded compilation remains the most efficient, battery-friendly, and "lap-safe" configuration.
 
 ### How to Run the README Benchmark
