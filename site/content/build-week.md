@@ -24,6 +24,30 @@ We used AI explicitly for:
 
 The human set goals, chose the product boundaries, read the output, and made acceptance decisions. Every useful claim had to survive a build, a test, a contract check, or a documented limitation.
 
+***
+
+## 🗺️ The Build Week Expedition Timeline
+
+Mediluna served as our Build Week expedition guide, documenting every major milestone in her explorer field journal as we built Boris:
+
+*   **Day 1: Finding the Trail 🌲**
+    *   *The Milestone:* Bootstrapped the Zig compiler scaffold, constructed the markdown AST parser, and initialized the memory-efficient entity-graph schema.
+    *   *Mediluna's Field Note:* *"The forest of documentation is dense, but we've found the trailhead. Boris is already packing the heavy Zig arena allocator gear."*
+*   **Day 2: Unfolding the Map 🗺️**
+    *   *The Milestone:* Implemented the strict parent-child graph validation rules (`EPARENTMISSING`, `ECYCLE`) to establish complete link safety.
+    *   *Mediluna's Field Note:* *"The paths must connect cleanly. We've laid out the content map and verified that no trail leads to a dead-end cliffside."*
+*   **Day 3: Surrounded by Sticky Notes 📝**
+    *   *The Milestone:* Built the WordPress WXR and Astro/Starlight Migration Laboratories, auditing frontmatter and resolving database slug collisions.
+    *   *Mediluna's Field Note:* *"Our campsite is covered in sticky notes mapping out old database tables. Slowly, everything is becoming neat and orderly."*
+*   **Day 4: Coffee & Compilation ☕**
+    *   *The Milestone:* Co-authored the SHA-256 incremental build caching engine, achieving a **2.7×** compilation speedup.
+    *   *Mediluna's Field Note:* *"Sipping hot coffee by the campfire while Boris compiles the entire 2,116-page wiki in under two seconds. The air smells like fresh pine and efficient memory arenas."*
+*   **Day 5: Planting the Flag 🏔️**
+    *   *The Milestone:* Completed the 5-mode multi-channel compilation suite (HTML, JSON IR, Context, RAG, and `llms.txt`) and deployed to GitHub Pages.
+    *   *Mediluna's Field Note:* *"We did it! Planted our tiny flag at the mountain summit. The zero-JS static site is live, and our content is finally, permanently free."*
+
+***
+
 ## Preserving the Honest Failures
 
 The project deliberately rejected arbitrary executable MDX, a JS app shell, runtime component frameworks, and “universal converter” promises. The journey was not perfect, and we preserve the honest failures:

@@ -10,6 +10,11 @@ tags: [migration, dogfood, wordpress, starlight, benchmarks]
 
 Boris is built on proof, not magic. It includes developer migration laboratories for auditing and converting bounded slices of external content, alongside strict performance benchmarks to validate its speed and determinism at the v0.7.0 release.
 
+<div style="text-align: center; margin-block: 2rem;">
+  <img src="assets/images/mediluna-migration-labs.png" alt="Mediluna examining ancient stone tablets of WordPress and HTML with a magnifying glass while neatly organizing them into folders." style="max-width: 450px; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+  <p style="font-style: italic; color: var(--muted); margin-top: 0.5rem; font-size: 1rem; font-weight: 500;">“Let’s make sure everything is in its proper place.”</p>
+</div>
+
 ## Migration Laboratories
 
 | Source shape | What the lab does | Honest boundary |

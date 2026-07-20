@@ -16,6 +16,11 @@ Traditional systems want to lock you in. They bind your documentation to heavy f
 
 An elephant never forgets where it put its data. Boris is the quiet elephant handing your website back to you in a box labeled **"Your Content"** 🐘📦.
 
+<div style="text-align: center; margin-block: 2rem;">
+  <img src="assets/images/mediluna-hero.jpg" alt="Mediluna, the Build Week expedition guide, walking happily along a forest trail." style="max-width: 400px; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+  <p style="font-style: italic; color: var(--muted); margin-top: 0.5rem; font-size: 1rem; font-weight: 500;">“Come on. Let’s migrate your content.”</p>
+</div>
+
 ***
 
 <Aside kind="note">

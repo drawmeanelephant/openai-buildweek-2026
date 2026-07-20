@@ -129,6 +129,11 @@ Partitions the content tree into semantic text chunks optimized for ingest by ve
 
 Compiles the entire content repository into a single, unified markdown file. Perfect for feeding directly into LLM prompts or chat assistant contexts.
 
+<div style="text-align: center; margin-block: 2rem;">
+  <img src="assets/images/mediluna-context-backpack.png" alt="Mediluna packing explorer gear and books labeled Markdown, JSON, Graph, Assets, and AI Context into her backpack." style="max-width: 450px; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+  <p style="font-style: italic; color: var(--muted); margin-top: 0.5rem; font-size: 1rem; font-weight: 500;">“Never leave knowledge behind.”</p>
+</div>
+
 * **Build Command:**
   ```bash
   ./bin/boris --input site/content --context --context-dir context
