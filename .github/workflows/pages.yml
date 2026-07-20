@@ -35,11 +35,36 @@ jobs:
 
       - name: Compile the Field Guide
         run: |
+          # 1. Compile HTML Static Site
           .boris/zig-out/bin/boris \
             --input site/content \
             --theme site/theme \
             --layout-rule default id:index site/theme/layouts/home.html \
             --html-dir dist \
+            --quiet
+          # 2. Compile JSON IR
+          .boris/zig-out/bin/boris \
+            --input site/content \
+            --no-rag \
+            --out dist/ir \
+            --quiet
+          # 3. Compile RAG Chunks
+          .boris/zig-out/bin/boris \
+            --input site/content \
+            --rag \
+            --rag-dir dist/rag \
+            --quiet
+          # 4. Compile Unified Context Bundle
+          .boris/zig-out/bin/boris \
+            --input site/content \
+            --context \
+            --context-dir dist/context \
+            --quiet
+          # 5. Compile llms.txt Manifest
+          .boris/zig-out/bin/boris \
+            --input site/content \
+            --llms \
+            --llms-path dist/llms.txt \
             --quiet
 
       - name: Run verification script

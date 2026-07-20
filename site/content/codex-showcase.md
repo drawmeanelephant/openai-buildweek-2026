@@ -78,6 +78,7 @@ Outputs a machine-readable JSON Intermediate Representation (IR) of the validate
   ```bash
   ./bin/boris --input site/content --no-rag --out .boris
   ```
+* **Interactive Live Demo:** [View Live Compiled JSON IR (Graph)](ir/graph.json) or [View Live Compiled JSON IR Manifest](ir/manifest.json)
 * **Sample Compiled Output (`.boris/index.json`):**
   ```json
   {
@@ -108,6 +109,7 @@ Partitions the content tree into semantic text chunks optimized for ingest by ve
   ```bash
   ./bin/boris --input site/content --rag --rag-dir rag
   ```
+* **Interactive Live Demo:** [View Live Compiled Entity Catalog Chunk](rag/graph/entity-catalog.md) or [View Live Compiled Relationships Chunk](rag/graph/relations.md)
 * **Sample Chunk File (`rag/pipeline_chunk_00.txt`):**
   ```text
   ---
@@ -131,6 +133,7 @@ Compiles the entire content repository into a single, unified markdown file. Per
   ```bash
   ./bin/boris --input site/content --context --context-dir context
   ```
+* **Interactive Live Demo:** [View Live Unified Context Bundle](context/bundle.md)
 * **Sample Context Bundle (`context/repository-context.md`):**
   ```markdown
   # REPOSITORY CONTEXT BUNDLE
@@ -158,6 +161,7 @@ Generates a standard `llms.txt` navigation manifest file, enabling AI agents and
   ```bash
   ./bin/boris --input site/content --llms --llms-path dist/llms.txt
   ```
+* **Interactive Live Demo:** [View Live Compiled llms.txt Manifest](llms.txt)
 * **Sample Manifest (`dist/llms.txt`):**
   ```text
   # Boris Field Guide
