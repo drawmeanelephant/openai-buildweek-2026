@@ -20,7 +20,7 @@ a:hover { text-decoration-thickness: 0.16em; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
 .header-inner { display: flex; min-height: 4.25rem; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand, .hero-title { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); font-weight: 800; text-decoration: none; letter-spacing: -0.02em; }
-.brand-mark { display: inline-grid; width: 2rem; height: 2rem; place-items: center; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 900; }
+.brand-mark { display: inline-grid; width: 2.2rem; height: 2.2rem; place-items: center; font-size: 1.8rem; line-height: 1; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.88rem; }
 .breadcrumb li + li::before { content: "/"; margin-right: 0.3rem; color: var(--line); }
 .breadcrumb a { color: inherit; }
