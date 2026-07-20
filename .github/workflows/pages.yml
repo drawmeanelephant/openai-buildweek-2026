@@ -1,9 +1,9 @@
-name: Build and deploy Field Guide
+name: Build, Validate and deploy Field Guide
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  pull_request:
 
 permissions:
   contents: read
@@ -42,7 +42,11 @@ jobs:
             --html-dir dist \
             --quiet
 
+      - name: Run verification script
+        run: python3 .github/scripts/validate.py
+
       - name: Configure GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/configure-pages@v5
 
       - name: Upload static site
@@ -53,6 +57,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
