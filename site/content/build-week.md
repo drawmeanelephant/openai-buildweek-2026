@@ -36,3 +36,7 @@ These failures are part of the story because scope control is engineering, not a
 ## Why the record matters
 
 The contest asks how Codex and GPT-5.6 were used. The honest answer is not that an agent pressed a button and a compiler appeared, nor is it generic AI hype claiming independent creation. It is that a long-running human–AI collaboration repeatedly made a technical claim, tested it, narrowed it, and kept what held up.
+
+***
+
+To see a detailed deep-dive on Codex's modules and code contributions, alongside a complete showcase of the 5 different output modes available in the system, see [[codex-showcase|Codex Showcase & Output Modes]].

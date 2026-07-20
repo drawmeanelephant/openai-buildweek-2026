@@ -12,6 +12,8 @@ def check_expected_outputs():
         "dist/build-week.html",
         "dist/migration-evidence.html",
         "dist/pipeline.html",
+        "dist/stress-tests.html",
+        "dist/codex-showcase.html",
         "dist/assets/css/field-guide.css",
     ]
     missing = []

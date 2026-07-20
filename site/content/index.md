@@ -35,7 +35,9 @@ This site is the contest-facing proof, deliberately separate from the compiler r
 
 - [[pipeline|The Pipeline]] — Markdown in, multiple explicit outputs out.
 - [[migration-evidence|Evidence & Benchmarks]] — Bounded dogfood audits and performance results.
+  - [[stress-tests|Stress Testing Runbook]] — Replicating and running the massive benchmarks locally.
 - [[build-week|How Boris Was Built]] — The human–AI collaboration story.
+  - [[codex-showcase|Codex Deep-Dive & Outputs]] — System-capabilities showcase and co-authoring logs.
 - [[agent-archive|The Agent Roster]] — A durable, evidence-bound thank-you to our synthetic collaborators.
 
 <Aside kind="note">

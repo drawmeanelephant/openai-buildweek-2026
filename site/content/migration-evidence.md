@@ -46,3 +46,7 @@ Boris compiled the dogfood corpus in seconds on the local test hardware, while A
 - **100% Deterministic Output:** Across all runs and concurrency levels (`-j 1` to `-j 10`), the generated output directory produced the exact same SHA-256 hash (`b67d1b66...`).
 - **Source Immutability:** Boris operates strictly read-only on the input directory.
 - **Hostile Testing:** The compiler was subjected to hostile adversarial testing against malformed trees and cyclically linked components. It failed safely and loudly via AST graph validation rather than silently publishing broken HTML.
+
+***
+
+To replicate these benchmark results or read the step-by-step instructions for our massive performance runs, see [[stress-tests|How to Run Stress Tests & Benchmarks]].
