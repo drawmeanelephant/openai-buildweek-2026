@@ -411,10 +411,7 @@ def main():
     print("=== BENCHMARKS COMPLETED SUCCESSFULLY ===")
 
 def write_environment_txt():
-    env_txt = f"""=== HOST ENVIRONMENT VARIABLE DUMP ===
-{chr(10).join(f"{k}={v}" for k, v in sorted(os.environ.items()))}
-
-=== HARDWARE SPECS ===
+    env_txt = f"""=== HARDWARE SPECS ===
 Processor: {results["metadata"]["host"]["cpu_brand"]}
 Cores: {results["metadata"]["host"]["cpu_cores"]}
 RAM: {results["metadata"]["host"]["ram_size_gb"]:.2f} GB
@@ -547,9 +544,9 @@ In addition to static HTML pages, Boris compiles separate structured representat
 
 ## 5. Key Architectural Conclusions
 
-1. **Native Compilation Advantage:** Boris (compiled in Zig to native machine code) outperforms both Astro versions by **several orders of magnitude** in compilation throughput (pages/second).
-2. **Minimal Memory Footprint:** The peak resident set size (RSS) for Boris remains under **30 MB**, compared to Astro's memory footprint of **300+ MB**, owing to Zig's manual memory management and lack of heavy Javascript runtime / bundler overhead.
-3. **Responsive Incrementality:** Under one-page edit scenarios, Boris's graph-aware incremental rendering checks file hashes and updates only modified pages within milliseconds, whereas JS compilers parse full dependency trees and rebuild with significant Vite overhead.
+1. **Native Compilation Advantage:** Boris (compiled in Zig to native machine code) delivered roughly **{stats["astro7"]["cold"]["median"] / stats["boris"]["cold"]["median"]:.1f}x** the median cold-build throughput of Astro 7 on this corpus.
+2. **Minimal Memory Footprint:** The peak resident set size (RSS) for Boris was **{stats["boris"]["cold"]["peak_rss_mb"]:.1f} MB**, compared to Astro 7's **{stats["astro7"]["cold"]["peak_rss_mb"]:.1f} MB** and Astro 6's **{stats["astro6"]["cold"]["peak_rss_mb"]:.1f} MB**.
+3. **Responsive Incrementality:** Under one-page edit scenarios, Boris's graph-aware incremental rendering completed in **{stats["boris"]["leaf_edit"]["median"]:.3f} seconds**, while Astro 7's comparable rebuild median was **{stats["astro7"]["leaf_edit"]["median"]:.3f} seconds**.
 """
     with open(BENCHMARK_DIR / "results.md", "w") as f:
         f.write(md_content)
@@ -587,7 +584,7 @@ def write_devpost_summary_md(stats):
     devpost_content = f"""# Devpost Pitch: Boris v0.7.0 vs Astro 6/7 Build Shootout
 
 ### 🚀 Performance Headline
-On an Apple M4 Mac, **Boris compiles a 2,117-page wiki corpus in just {stats["boris"]["cold"]["median"]:.3f} seconds** ({stats["boris"]["throughput_pages_per_sec"]:.1f} pages/sec) from a cold start, outperforming Astro 7 by **{speedup:.1f}x** and utilizing **10x less memory**.
+On an Apple M4 Mac, **Boris compiles a 2,117-page wiki corpus in just {stats["boris"]["cold"]["median"]:.3f} seconds** ({stats["boris"]["throughput_pages_per_sec"]:.1f} pages/sec) from a cold start, outperforming Astro 7 by **{speedup:.1f}x** and using **over 10x less memory**.
 
 ### 📊 Comparative Metrics (Apple M4 Mac, 10-run Medians)
 - **Cold Compilation:** Boris **{stats["boris"]["cold"]["median"]:.3f}s** | Astro 7 **{stats["astro7"]["cold"]["median"]:.3f}s**
@@ -597,8 +594,8 @@ On an Apple M4 Mac, **Boris compiles a 2,117-page wiki corpus in just {stats["bo
 
 ### 🧠 Architectural Takeaways
 1. **Zero-Overhead Compilation:** By building the Markdown-to-HTML parser natively in Zig, Boris bypasses the Node.js module resolution, JS transpilation, and bundler packaging loops, which dominate the startup costs of Javascript static generators.
-2. **Deterministic, Graph-Aware Caching:** Under incremental mode, Boris checks content-addressed file hashes and updates only modified leaf nodes instantly, completing partial builds within milliseconds.
-3. **Multimodal LLM Integrations:** Boris compiles not just HTML, but simultaneously builds machine-readable JSON IR representation, vectorized RAG outputs, single-prompt context bundles, and LLM guides, paving the way for AI-first documentation.
+2. **Deterministic, Graph-Aware Caching:** Under incremental mode, Boris checks content-addressed file hashes and updates the one-page edit scenario in **{stats["boris"]["leaf_edit"]["median"]:.3f}s** median.
+3. **Multimodal LLM Integrations:** From the same content graph, Boris can also emit machine-readable JSON IR, RAG output, a single context bundle, and `llms.txt` in separate deterministic modes.
 """
     with open(BENCHMARK_DIR / "DEVPOST-SUMMARY.md", "w") as f:
         f.write(devpost_content)

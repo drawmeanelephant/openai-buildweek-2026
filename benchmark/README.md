@@ -25,7 +25,7 @@ It requires network access and host profile capabilities. Ensure the execution s
 - `prep_filed_fyi.py`: Corpus converter script that transforms the raw Starlight content into the flat-navigation 2,111 content pages + 5 category index pages corpus.
 - `astro6/`: Pinned Astro 6.4.8 project environment with committed lockfile.
 - `astro7/`: Pinned Astro 7.0.7 project environment with committed lockfile.
-- `environment.txt`: Text dump of host specifications, OS, compiler configurations, and environment variables.
+- `environment.txt`: Host specifications, OS, compiler, and runtime versions.
 - `results.json`: Complete raw JSON dataset of all 10 timed runs across the 4 scenarios for all compilers.
 - `results.md`: Beautifully formatted markdown report detailing findings, tables, throughput, memory, and architectural analysis.
 - `raw/`: Subdirectory containing raw `stdout` and `stderr` execution logs for every compile run.

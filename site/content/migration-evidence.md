@@ -66,7 +66,7 @@ To compare compilation efficiency against a modern, widely used framework, we co
 
 ### Architectural Conclusions
 * **Thread Scaling:** Astro's JavaScript-based bundler remains largely single-threaded during key build stages (Vite/Rollup bound to 136% CPU load), whereas Boris (compiled native Zig) efficiently distributes graph rendering across multiple available cores (utilizing **524%** CPU capacity).
-* **Zero Dependency Cost:** Astro incurs overhead for arbitrary JS components, asset pipelines, node runtime boot, and search index generation. Boris operates strictly as a native local compiler, producing standard HTML in milliseconds.
+* **Zero Dependency Cost:** Astro incurs overhead for arbitrary JS components, asset pipelines, node runtime boot, and search index generation. Boris operates strictly as a native local compiler, producing the benchmark corpus in a few seconds.
 
 ---
 

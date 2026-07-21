@@ -45,7 +45,7 @@ Instead of silently failing or dropping content during conversion, Boris's **Mig
 
 ## 🔄 One Input. Five Multi-Channel Outputs.
 
-When you compile with Boris, you aren't just writing HTML pages. You are generating an **AI-ingestible knowledge graph**. From a single Markdown directory, Boris simultaneously and deterministically compiles:
+When you compile with Boris, you aren't just writing HTML pages. You are generating an **AI-ingestible knowledge graph**. From a single Markdown directory, Boris can deterministically emit:
 
 1. **HTML Static Site (Zero-JS):** Beautiful, ultra-fast static developer documentation with zero runtime framework dependencies.
 2. **JSON Intermediate Representation (IR):** A machine-readable JSON representation of your validated content graph ([ir/graph.json](ir/graph.json)) for headless pipelines.
