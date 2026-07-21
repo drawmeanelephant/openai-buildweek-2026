@@ -76,6 +76,6 @@ In addition to static HTML pages, Boris compiles separate structured representat
 
 ## 5. Key Architectural Conclusions
 
-1. **Native Compilation Advantage:** Boris (compiled in Zig to native machine code) outperforms both Astro versions by **several orders of magnitude** in compilation throughput (pages/second).
-2. **Minimal Memory Footprint:** The peak resident set size (RSS) for Boris remains under **30 MB**, compared to Astro's memory footprint of **300+ MB**, owing to Zig's manual memory management and lack of heavy Javascript runtime / bundler overhead.
-3. **Responsive Incrementality:** Under one-page edit scenarios, Boris's graph-aware incremental rendering checks file hashes and updates only modified pages within milliseconds, whereas JS compilers parse full dependency trees and rebuild with significant Vite overhead.
+1. **Native Compilation Advantage:** Boris (compiled in Zig to native machine code) delivered roughly **6.3x** the median cold-build throughput of Astro 7 on this corpus.
+2. **Minimal Memory Footprint:** The peak resident set size (RSS) for Boris was **112.6 MB**, compared to Astro 7's **1476.5 MB** and Astro 6's **2328.9 MB**.
+3. **Responsive Incrementality:** Under one-page edit scenarios, Boris's graph-aware incremental rendering completed in **1.096 seconds**, while Astro 7's comparable rebuild median was **22.878 seconds**.
