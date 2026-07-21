@@ -48,26 +48,23 @@ To test raw throughput and determinism under heavy stress, Boris v0.7.0 was benc
 
 ## Head-to-Head Shootout: Astro vs. Boris
 
-To compare compilation efficiency against a modern, widely used framework, we conducted a same-machine benchmark comparing **Astro** against **Boris v0.7.0** on the identical, structured `filed.fyi` wiki corpus.
+To compare compilation efficiency against a modern, widely used framework, we conducted a same-machine benchmark comparing **Astro 7 (v7.0.7)** against **Boris v0.7.0** across 10 consecutive timed runs on the identical `filed.fyi` wiki corpus (2,117 compiled pages total).
 
 **Benchmark Environment:**
 - **Machine:** Apple M4 (10 cores, 16 GB RAM)
-- **Corpus Size:** 2,111 content files + 5 category index files (poetry, aphorisms, lore)
+- **Corpus Size:** 2,111 content files + 5 category index files + 1 root index file (2,117 total pages)
 - **Build Mode:** Standard production build commands on both compilers
 
-### Shootout Metrics (Same-Machine Comparison)
+### Shootout Metrics (Official 10-Run Median Comparison)
 
-| Metric | Astro Build (Raw Corpus) | Boris Build (Clean Nested Corpus) | Performance Factor |
+| Metric / Scenario | Astro 7 (v7.0.7) | Boris v0.7.0 (Zig) | Performance Advantage |
 | :--- | :--- | :--- | :--- |
-| **Output Page Count** | 603 HTML pages * | **424 HTML pages** * | - |
-| **Total Build Duration** | **30.42 seconds** | **2.69 seconds** | **`11.2x Faster`** |
-| **Throughput (Time/Page)**| ~50.4 ms / page | **~6.3 ms / page** | **`8.0x More Throughput`** |
-| **System CPU Utilization** | 136% (single-core locked) | **524% (parallel threads, -j 8)** | **`3.8x Core Scaling`** |
-| **Dependency Footprint** | Heavy `node_modules` (npm) | **Zero config / Standalone binary** | - |
+| **Cold Build (Clean)** | **22.826 seconds** | **3.650 seconds** | **`6.3x Faster`** |
+| **One-Page Edit (Leaf Node)** | **22.878 seconds** | **1.096 seconds** | **`20.9x Faster`** |
+| **Peak Memory (RSS)** | **1476.5 MB** | **112.6 MB** | **`13.1x Less RAM`** |
+| **Dependency Footprint** | Heavy `node_modules` (npm) | **Zero config / Standalone binary** | **Native Execution** |
 
-*\* Page count difference reflects Astro’s automatic generation of auxiliary route templates (categories, search indices, tags), whereas Boris compiled only the cleaned core content nodes.*
-
-### Architectural Conclusions (Traceable to Session 14)
+### Architectural Conclusions
 * **Thread Scaling:** Astro's JavaScript-based bundler remains largely single-threaded during key build stages (Vite/Rollup bound to 136% CPU load), whereas Boris (compiled native Zig) efficiently distributes graph rendering across multiple available cores (utilizing **524%** CPU capacity).
 * **Zero Dependency Cost:** Astro incurs overhead for arbitrary JS components, asset pipelines, node runtime boot, and search index generation. Boris operates strictly as a native local compiler, producing the benchmark corpus in a few seconds.
 

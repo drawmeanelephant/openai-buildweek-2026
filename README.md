@@ -77,4 +77,4 @@ workflow only deploys from `main`.
 
 ## Evidence boundary
 
-The Build Week collaboration involved continuous human steering, Codex/ChatGPT, and bounded external reviews and experiments. This field guide distinguishes verified code and release evidence from draft art, agent names, and exploratory material. It is a record, not a mythology generator.
+The Build Week collaboration involved continuous human steering, Codex and GPT-5.6, and bounded external reviews and experiments. This field guide distinguishes verified code and release evidence from draft art, agent names, and exploratory material. It is a record, not a mythology generator.
