@@ -1,0 +1,22 @@
+# Ignore local dependency installations
+astro6/node_modules/
+astro7/node_modules/
+
+# Ignore local Astro caches and build directories
+astro6/.astro/
+astro6/dist/
+astro7/.astro/
+astro7/dist/
+
+# Ignore copied content source directories
+astro6/src/content/docs/
+astro7/src/content/docs/
+
+# Ignore local Boris run directories
+boris-source/
+boris-dist/
+boris-ir/
+boris-rag/
+boris-context/
+boris-llms.txt
+temp-corpus/

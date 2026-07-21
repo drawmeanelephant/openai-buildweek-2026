@@ -1,0 +1,13 @@
+{
+  "name": "benchmark-astro6",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build"
+  },
+  "dependencies": {
+    "astro": "6.4.8",
+    "@astrojs/starlight": "0.39.3"
+  }
+}
