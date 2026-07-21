@@ -1,0 +1,55 @@
+=== HOST ENVIRONMENT VARIABLE DUMP ===
+AGY_BROWSER_ACTIVE_PORT_FILE=/Users/tbuddy/Library/Application Support/Antigravity/DevToolsActivePort
+AGY_BROWSER_WS_URL=ws://127.0.0.1:56065/devtools/browser/1a94f696-403c-4e80-9f0e-e2a6fc62adff
+ANTIGRAVITY_AGENT=1
+ANTIGRAVITY_CONVERSATION_ID=37f52ad5-a53f-4427-b38b-b35b13e52ecb
+ANTIGRAVITY_CSRF_TOKEN=92c9fed1-d64f-40d3-bc4d-2f51296bb8bf
+ANTIGRAVITY_LS_ADDRESS=localhost:56067
+ANTIGRAVITY_PROJECT_ID=4708d1f6-bb9b-4ade-8363-e8fc8516eb6f
+ANTIGRAVITY_SAFECLIS_DIR=/Users/tbuddy/.gemini/antigravity/bin/safeclis
+ANTIGRAVITY_SOURCE_METADATA={"tool":{"conversationId":"37f52ad5-a53f-4427-b38b-b35b13e52ecb","stepIndex":297,"toolCall":{"id":"40jan22r","name":"run_command","argumentsJson":"{\"BypassSandbox\":true,\"CommandLine\":\"./benchmark/run-benchmarks.sh\",\"Cwd\":\"/Users/tbuddy/Documents/antigravity/boris-dogfood-kit/openai-buildweek-2026\",\"WaitMsBeforeAsync\":5000,\"toolAction\":\"Run benchmark suite (bypass sandbox)\",\"toolSummary\":\"Run benchmark suite (bypass sandbox)\"}","thinkingSignature":"EugECuUEARFNMg/quSFpz4SrHG6ayClfP8+YzlE8DK8hhvkRMbFCG1asRvVO+nYz6tnUkXNj191/7qoKoPl2lRfNfYLMKwJDr5+sT6OrAx5wOcDFQz5S7UQRv53uF/9ZHpilROAb8LGxFm41bKz35XiCrgWMQv67xQRd1HzJd2kpgr2Z05Zv885nt+fLMzYYFER6T5B4sbd54rpUi8+gzZfDBy3uUwwuZQDzQ/5o+1lF2ZOLQyAmEIInlZLs5q+oR+k545laCbQYKtfr0R09FWUy/y7Hm1PONtqXoErvijTczBrUuPbe01mJQMLcupB+klGTerWCdKpxhKn9JXGXiWOQnTaf2HvfNlmtyu6UYwiNYalw170eyY6BDKoQc/c++aNz846TTIW+d9feFNvjuEAzHU4HZBRannB2qZRrKrGrtDX/MTSJCeV4Tt8j+Ej/fFKaXn3AtM7EDInmXRmnvj0S9e3kgVtKQxwQxLNzDkrvb+dq/2Q5xOKBNrEPrhTSmqGPoUe6u3rWWtyyttjo84B/Y+5GwafZ70q4GSHnQ/Zo5JQZWqShglZOcjJvYWoyY5PEmIgSfy2uu9pF4xxdqYgnSYyjHkQ/2mNl1mskBoPlEo7GVtsWo1gOh2wC5x8mOH+Gmd0mkyyVCaqWaN0NnOcspgxxe/RFaEAp8kNICnZMscKpGqO07HUbZnev/EjRLrzkluifGvxYB5qAtp0ZsXMKXpAZ01+el43k5tVEvvqnZpPZxwFLSrBahoUde9fqLm9tsQDi2nkytuZw4RqPp3EJgmO2S4HZKVIeKeRKC38+pBqvSXhReMiYlA==","originalName":"run_command"}}}
+ANTIGRAVITY_TRAJECTORY_ID=b9929c35-ebc0-4547-b882-e38030084316
+CHROME_DEVTOOLS_MCP_JS=/Applications/Antigravity.app/Contents/Resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js
+COMMAND_MODE=unix2003
+DISABLE_AUTO_UPDATE=true
+DISPLAY=/var/run/com.apple.launchd.eOdTyvs2XB/org.xquartz:0
+HOME=/Users/tbuddy
+HOMEBREW_CELLAR=/opt/homebrew/Cellar
+HOMEBREW_PREFIX=/opt/homebrew
+HOMEBREW_REPOSITORY=/opt/homebrew
+INFOPATH=/opt/homebrew/share/info:
+LC_CTYPE=C.UTF-8
+LOGNAME=tbuddy
+NVM_BIN=/Users/tbuddy/.nvm/versions/node/v22.22.3/bin
+NVM_CD_FLAGS=
+NVM_DIR=/Users/tbuddy/.nvm
+NVM_INC=/Users/tbuddy/.nvm/versions/node/v22.22.3/include/node
+OSLogRateLimit=64
+PATH=/Users/tbuddy/.gemini/antigravity/bin:/Users/tbuddy/Library/Application Support/Antigravity/bin:/Users/tbuddy/.local/bin:/Users/tbuddy/.grok/bin:/Users/tbuddy/.cargo/bin:/Users/tbuddy/.nvm/versions/node/v22.22.3/bin:/Users/tbuddy/.local/bin:/Users/tbuddy/.antigravity-ide/antigravity-ide/bin:/Users/tbuddy/.antigravity/antigravity/bin:/Users/tbuddy/.codeium/windsurf/bin:/Users/tbuddy/.deno/bin:/Users/tbuddy/.antigravity/antigravity/bin:/Users/tbuddy/.local/bin:/opt/homebrew/opt/python@3.14/libexec/bin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Users/tbuddy/.orbstack/bin
+PWD=/Users/tbuddy/Documents/antigravity/boris-dogfood-kit/openai-buildweek-2026
+SHELL=/opt/homebrew/bin/bash
+SHLVL=2
+SSH_AUTH_SOCK=/var/run/com.apple.launchd.y9DrI0ouhm/Listeners
+TMPDIR=/var/folders/p_/h710w89x7b16x249r_061lkw0000gn/T/
+USER=tbuddy
+XPC_FLAGS=0x0
+XPC_SERVICE_NAME=0
+ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOSTARTED=true
+_=/opt/homebrew/bin/python3
+__CFBundleIdentifier=com.google.antigravity
+__CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0
+
+=== HARDWARE SPECS ===
+Processor: Apple M4
+Cores: 10
+RAM: 16.00 GB
+
+=== SOFTWARE VERSIONS ===
+OS: ProductName:		macOS; ProductVersion:		27.0; BuildVersion:		26A5388g
+Node: v22.22.3
+npm: 10.9.8
+Zig: 0.16.0
+Boris: v0.7.0 (commit bd080c737be01d1445eaf6ec4224edf397373910)
+Astro 6: 6.4.8
+Astro 7: 7.0.7
