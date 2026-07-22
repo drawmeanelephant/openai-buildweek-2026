@@ -24,11 +24,16 @@ a:hover { text-decoration-thickness: 0.16em; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.88rem; }
 .breadcrumb li + li::before { content: "/"; margin-right: 0.3rem; color: var(--line); }
 .breadcrumb a { color: inherit; }
-.hero { border-bottom: 1px solid var(--line); background: var(--soft); }
-.hero-inner { padding-block: 3.5rem 2.5rem; }
+.hero { border-bottom: 1px solid var(--line); background: radial-gradient(circle at 85% 15%, var(--brand-soft), transparent 34%), var(--soft); }
+.hero-inner { padding-block: clamp(2.5rem, 8vw, 5rem) clamp(2rem, 5vw, 3.5rem); }
 .eyebrow { margin: 0 0 0.45rem; color: var(--muted); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .hero-title { margin: 0; font-size: clamp(2rem, 6vw, 4rem); letter-spacing: -0.055em; }
 .hero-lead { max-width: 43rem; margin: 0.65rem 0 1.25rem; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.3rem); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.35rem; }
+.button { display: inline-flex; align-items: center; min-height: 2.7rem; padding: 0.55rem 0.9rem; border: 1px solid var(--brand); border-radius: 999px; background: var(--brand); color: #fff; font-size: 0.9rem; font-weight: 800; text-decoration: none; box-shadow: 0 0.25rem 0.75rem rgba(20, 114, 75, 0.16); }
+.button:hover { background: transparent; color: var(--brand); text-decoration: none; }
+.button--quiet { border-color: var(--line); background: var(--surface); color: var(--ink); box-shadow: none; }
+.button--quiet:hover { border-color: var(--brand); color: var(--brand); }
 .shell { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 11rem; gap: 1.25rem; align-items: start; padding-block: 1.5rem 2.5rem; }
 .site-rail, .toc-rail { position: sticky; top: 1rem; font-size: 0.9rem; }
 .site-nav ul, .page-toc ul, .page-children ul { margin: 0; padding: 0; list-style: none; }
@@ -38,12 +43,12 @@ a:hover { text-decoration-thickness: 0.16em; }
 .site-nav a:hover, .page-toc a:hover, .site-nav .is-current > a { background: var(--brand-soft); color: var(--brand); }
 .site-nav .is-current > a { font-weight: 750; }
 .page-toc__l2 { padding-left: 0.5rem; }.page-toc__l3 { padding-left: 1rem; }
-.reading-panel, .home-panel { margin-block: 1.5rem 2.5rem; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); background: var(--surface); }
+.reading-panel, .home-panel { margin-block: 1.5rem 2.5rem; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 1.1rem; background: var(--surface); box-shadow: 0 0.8rem 2.5rem rgba(27, 39, 32, 0.06); }
 .shell .reading-panel { margin: 0; }
 .page-metadata { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; margin: 0 0 1.4rem; padding: 0.55rem 0.7rem; background: var(--soft); font-size: 0.8rem; }
 .page-metadata div { display: flex; gap: 0.3rem; }.page-metadata dt { font-weight: 750; }.page-metadata dd { margin: 0; color: var(--muted); }
 .prose > :first-child { margin-top: 0; }.prose h1, .prose h2, .prose h3 { line-height: 1.2; letter-spacing: -0.025em; }.prose h1 { font-size: clamp(1.85rem, 5vw, 3rem); }.prose h2 { margin-top: 2rem; font-size: 1.4rem; }.prose h3 { margin-top: 1.35rem; font-size: 1.1rem; }
-.prose :not(pre) > code { padding: 0.1em 0.3em; background: var(--brand-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }.prose pre { overflow-x: auto; padding: 1rem; background: var(--code); color: var(--code-ink); }.prose pre code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.prose :not(pre) > code { padding: 0.1em 0.3em; background: var(--brand-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }.prose pre { overflow-x: auto; padding: 1rem; background: var(--code); color: var(--code-ink); }.prose pre code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }.prose img { max-width: 100%; height: auto; }
 .prose table { display: block; overflow-x: auto; border-collapse: collapse; border: 1px solid var(--line); }.prose th, .prose td { padding: 0.5rem 0.65rem; border-bottom: 1px solid var(--line); text-align: left; }.prose th { background: var(--soft); }.prose tr:last-child td { border-bottom: 0; }
 .admonition { margin: 1.15rem 0; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-left: 0.3rem solid var(--brand); background: var(--soft); }.admonition--warning { border-left-color: var(--focus); }.admonition__title { margin: 0 0 0.2rem; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
 .children { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }.children h2 { margin: 0 0 0.6rem; font-size: 1.1rem; }.page-children li + li { margin-top: 0.4rem; }
