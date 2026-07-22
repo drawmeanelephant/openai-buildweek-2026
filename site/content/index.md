@@ -12,7 +12,7 @@ tags: [boris, build-week, field-guide]
 
 Traditional systems want to lock you in. They bind your documentation to heavy framework runtimes, proprietary database structures, or complex JS bundlers. 
 
-**Boris is a deterministic content compiler co-authored with OpenAI Codex in Zig 0.16.0.** It turns content from WordPress, Astro, Starlight, Obsidian, and local Markdown into standard local files that you own forever—then compiles them instantly into a zero-dependency static site, a structured semantic graph, and AI-ready training context.
+**Boris is a deterministic documentation compiler built in modern Zig 0.16.0.** It turns content from WordPress, Astro, Starlight, Obsidian, and local Markdown into standard local files that you own forever—then compiles them instantly into a zero-dependency static site, a structured semantic graph, and AI-ready context.
 
 An elephant never forgets where it put its data. Boris is the quiet elephant handing your website back to you in a box labeled **"Your Content"** 🐘📦.
 
@@ -88,8 +88,9 @@ Boris was built to be an honest, highly functional, and innovative entry for the
 
 ## Submission Info & Checklist
 
+- **Hackathon:** [OpenAI Build Week](https://openai.devpost.com/) — the Codex building week has ended; winners are announced soon.
+- **Devpost submission:** [Boris on Devpost](https://devpost.com/software/boris-ebqd2l)
 - **Live Demo:** [drawmeanelephant.github.io/openai-buildweek-2026](https://drawmeanelephant.github.io/openai-buildweek-2026/)
-- **Demo Video:** [Pending final upload during checkout](https://github.com/drawmeanelephant/openai-buildweek-2026)
 - **Release Tag:** [v0.7.0](https://github.com/drawmeanelephant/boris/releases/tag/v0.7.0)
 - **Codex session ID:** `bee98e9f-de65-4009-9b61-0fe980843ace`
 
@@ -97,7 +98,7 @@ Boris was built to be an honest, highly functional, and innovative entry for the
 - [x] **Test instructions:** Documented in [README.md](https://github.com/drawmeanelephant/openai-buildweek-2026/blob/main/README.md)
 - [x] **Public repository:** Available at [drawmeanelephant/boris](https://github.com/drawmeanelephant/boris)
 - [x] **README:** Complete
-- [x] **Demo video:** [Pending final upload during checkout](https://github.com/drawmeanelephant/openai-buildweek-2026)
+- [x] **Devpost submission:** [Boris on Devpost](https://devpost.com/software/boris-ebqd2l)
 - [x] **Codex session ID:** `bee98e9f-de65-4009-9b61-0fe980843ace`
 - [x] **How Codex/GPT-5.6 was used:** Detailed in [[build-week|How Boris Was Built]]
 - [x] **Known limitations:** Detailed in [[build-week|How Boris Was Built]]
