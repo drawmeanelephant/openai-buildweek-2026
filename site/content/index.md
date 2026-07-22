@@ -24,7 +24,7 @@ An elephant never forgets where it put its data. Boris is the quiet elephant han
 ***
 
 <Aside kind="note">
-🚪 **[Try a Migration Audit](migration-evidence)**
+🚪 **[[migration-evidence|Try a Migration Audit]]**
 Explore how Boris-migration-lab converts actual WordPress, Astro, and Starlight sites, outputting detailed evidence reports that prove exactly what survived and what needs human review.
 </Aside>
 
